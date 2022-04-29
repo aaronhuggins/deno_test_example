@@ -30,14 +30,14 @@ const ageTests = describe({
   },
 });
 
-it(ageTests, "getAge", function (this: { user: User }) {
+it(ageTests, "getAge", function () {
   const { user } = this;
   assertThrows(() => user.getAge(), Error, "Age unknown");
   user.age = 18;
   assertEquals(user.getAge(), 18);
 });
 
-it(ageTests, "setAge", function (this: { user: User }) {
+it(ageTests, "setAge", function () {
   const { user } = this;
   user.setAge(18);
   assertEquals(user.getAge(), 18);
