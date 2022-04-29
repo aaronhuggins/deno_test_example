@@ -76,7 +76,7 @@ class SuiteGroup<T extends Record<string | symbol | number, any>>
   }
 }
 
-class BDD<T = unknown> {
+class BDD {
   static suiteGroups = new Map<symbol, SuiteGroup<any>>();
   static currentSuiteGroup?: SuiteGroup<any>;
 
@@ -208,8 +208,6 @@ class BDD<T = unknown> {
     };
   }
 }
-
-console.log("BDD.currentSuiteGroup", typeof BDD.currentSuiteGroup);
 
 export function describe<T = unknown>(name: string): TestSuite<T>;
 export function describe<T = unknown>(options: DescribeOpts<T>): TestSuite<T>;
