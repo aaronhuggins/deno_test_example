@@ -32,7 +32,7 @@ interface DescribeOpts<T> {
 // The group for the 'describe' callback we are currently in. If there is no
 // current group, we are not in a 'describe' callback.
 let currentGroup: Group | undefined;
-
+console.log("currentGroup", typeof currentGroup)
 interface Tester {
   step: (name: string, fn: (t: any) => (Promise<void>)) => Promise<void>
 }
